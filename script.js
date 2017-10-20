@@ -26,14 +26,9 @@
         infoWindow.open(map);
       }
 
-      navigator.notification.alert(
-    'You are the winner!',  // message
-    alertDismissed,         // callback
-    'Game Over',            // title
-    'Done'                  // buttonName
-);
 
       function locate(){
+      	navigator.notification.alert("Turn on location", alertDismissed,'location', 'okay');
       	navigator.geolocation.getCurrentPosition(onSuccess, onError);
       }
 
