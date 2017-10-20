@@ -26,9 +26,7 @@
         infoWindow.open(map);
       }
 
-      function alert(){
-      	navigator.notification.alert("Turn on location", alertDismissed,'location', 'okay');
-      }
+      
 
       function locate(){
       	navigator.geolocation.getCurrentPosition(onSuccess, onError);
