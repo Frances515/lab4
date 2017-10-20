@@ -27,15 +27,9 @@
       }
 
       function locate(){
-      	navigator.notification.alert(
-		    'You are the winner!',  // message
-		    alertDismissed,         // callback
-		    'Game Over',            // title
-		    'Done'                  // buttonName
-		    navigator.geolocation.getCurrentPosition(onSuccess, onError);
-);
-
       	
+
+      	navigator.geolocation.getCurrentPosition(onSuccess, onError);
       }
 
       function onSuccess(position) {
