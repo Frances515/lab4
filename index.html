@@ -14,33 +14,58 @@
       <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
       </script> 
     <style>
+
+
       /*Defining the size of the map*/
 
       #map {
-        height: 80%;
-        width: 80%;
+        height: 90%;
+        width: 100%;
       }
       
     /*Map on windows*/
 
       html, body {
-        height: 80%;
+        height: 90%;
         margin: 0;
         padding: 0;
+
+      }
+
+      /*Including background image*/
+
+      body{
+       background: url(background.jpg) no-repeat center center fixed;
+      -webkit-background-size: cover;
+      -moz-background-size: cover;
+      -o-background-size: cover;
+      background-size: cover;
+      }
+
+      button{
+        width: 100%;
       }
     </style>
      <script src="script.js"></script>
   </head>
   <body>
 
-  <div id="map" ></div>
-
   <!-- Reminding user to turn on location -->
 
-  <p><i> Remember to turn on your location<i></p>
+    <center><p><i><strong> Remember to turn on your location</strong><i></p></center>
+
+
+  <div id="map" ></div>
+
+ 
+  
     <div id = "btn"">
     
-      <button class="btn waves-effect waves-light" type="submit" name="action" onclick="locate()"><i class="material-icons ">location_on</i>
+      <br>
+      <button class="btn indigo darken-3" type="submit" name="action" onclick="locate()"><i class="material-icons ">location_on</i></button>
+      <br>
+      <button class="btn  grey darken-1 " type="submit" name="action" onclick="nolocate()"><i class="material-icons ">location_off</i></button>
+
 
     </div>
 
