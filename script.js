@@ -20,13 +20,19 @@
       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
         infoWindow.setPosition(pos);
         infoWindow.setContent(browserHasGeolocation ?
-        	
+
                               'Error: The Geolocation service failed.' :
                               'Error: Your browser doesn\'t support geolocation.');
         infoWindow.open(map);
       }
 
       function locate(){
+      	navigator.notification.alert(
+    'You are the winner!',  // message
+    alertDismissed,         // callback
+    'Game Over',            // title
+    'Done'                  // buttonName
+);
       	navigator.geolocation.getCurrentPosition(onSuccess, onError);
       }
 
